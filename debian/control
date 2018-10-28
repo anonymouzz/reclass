@@ -1,0 +1,84 @@
+Source: reclass
+Section: python
+Priority: extra
+Maintainer: Mikhail Sokolov <sokolov.m.v@gmail.com>
+Uploaders: Mikhail Sokolov <sokolov.m.v@gmail.com>
+Build-Depends: debhelper (>= 8.9.7),
+               python,
+               python-setuptools,
+               python-sphinx,
+               python-yaml,
+               python-pyparsing,
+               python-six,
+               python-enum34
+Standards-Version: 3.9.6
+XS-Python-Version: all
+Homepage: https://github.com/salt-formulas/reclass/
+Vcs-Git: https://github.com/salt-formulas/reclass.git
+Vcs-Browser: https://github.com/salt-formulas/reclass.git
+
+Package: reclass
+Architecture: all
+Section: admin
+Depends: python-reclass (= ${binary:Version}),
+         ${misc:Depends},
+         ${python:Depends}
+Suggests: reclass-doc
+Description: hierarchical inventory backend for configuration management systems
+ reclass is an "external node classifier" (ENC) as can be used with automation
+ tools, such as Puppet, Salt, and Ansible. It is also a stand-alone tool for
+ merging data sources recursively.
+ .
+ The purpose of an ENC is to allow a system administrator to maintain an
+ inventory of nodes to be managed, completely separately from the configuration
+ of the automation tool. Usually, the external node classifier completely
+ replaces the tool-specific inventory (such as site.pp for Puppet,
+ ext_pillar/master_tops for Salt, or /etc/ansible/hosts).
+ .
+ reclass allows you to define your nodes through class inheritance, while
+ always able to override details further up the tree (i.e. in more specific
+ nodes). Think of classes as feature sets, as commonalities between nodes, or
+ as tags. Add to that the ability to nest classes (multiple inheritance is
+ allowed, well-defined, and encouraged), and piece together your infrastructure
+ from smaller bits, eliminating redundancy and exposing all important
+ parameters to a single location, logically organised.
+ .
+ This package provides the reclass CLI and adapters for Salt and Ansible.
+
+Package: python-reclass
+Architecture: all
+Depends: python-pkg-resources,
+         ${python:Depends},
+         ${misc:Depends},
+         python-pyparsing,
+         python-six,
+         python-enum34
+Description: hierarchical inventory backend for configuration management systems
+ reclass is an "external node classifier" (ENC) as can be used with automation
+ tools, such as Puppet, Salt, and Ansible. It is also a stand-alone tool for
+ merging data sources recursively.
+ .
+ The purpose of an ENC is to allow a system administrator to maintain an
+ inventory of nodes to be managed, completely separately from the configuration
+ of the automation tool. Usually, the external node classifier completely
+ replaces the tool-specific inventory (such as site.pp for Puppet,
+ ext_pillar/master_tops for Salt, or /etc/ansible/hosts).
+ .
+ reclass allows you to define your nodes through class inheritance, while
+ always able to override details further up the tree (i.e. in more specific
+ nodes). Think of classes as feature sets, as commonalities between nodes, or
+ as tags. Add to that the ability to nest classes (multiple inheritance is
+ allowed, well-defined, and encouraged), and piece together your infrastructure
+ from smaller bits, eliminating redundancy and exposing all important
+ parameters to a single location, logically organised.
+
+Package: reclass-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: reclass documentation
+ reclass is an "external node classifier" (ENC) as can be used with automation
+ tools, such as Puppet, Salt, and Ansible. It is also a stand-alone tool for
+ merging data sources recursively.
+ .
+ This package provides the documentation for reclass.
