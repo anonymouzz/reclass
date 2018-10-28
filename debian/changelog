@@ -1,0 +1,103 @@
+reclass (1.5.6-1ppa1) xenial; urgency=medium
+
+  * Initial release of v1.5.6 from https://github.com/salt-formulas/reclass
+
+ -- Mikhail Sokolov <sokolov.m.v@gmail.com>  Sat, 27 Oct 2018 22:09:16 +0700
+
+reclass (1.4.1-3) unstable; urgency=medium
+
+  * Revert d/compat and standards update to allow stretch migration
+
+ -- Filip Pytloun <filip@pytloun.cz>  Sat, 11 Mar 2017 10:14:58 +0100
+
+reclass (1.4.1-2) unstable; urgency=medium
+
+  * d/patches: backport Fix UndefinedVariableError (Closes: #857337)
+  * Add d/watch file
+  * Raise d/compat to 10, update standards to 3.9.8
+  * Add myself as uploader
+
+ -- Filip Pytloun <filip@pytloun.cz>  Fri, 10 Mar 2017 08:45:53 +0100
+
+reclass (1.4.1-1) unstable; urgency=low
+
+  * New upstream release reverting the logging changes, which weren't ready
+    yet.
+
+ -- martin f. krafft <madduck@debian.org>  Tue, 28 Oct 2014 15:56:59 +0100
+
+reclass (1.4-1) unstable; urgency=low
+
+  * New upstream release (closes: #761952).
+  * Compliant with Debian Policy 3.9.6.
+
+ -- martin f. krafft <madduck@debian.org>  Sat, 25 Oct 2014 15:12:25 +0200
+
+reclass (1.3-2) UNRELEASED; urgency=medium
+
+  * Add myself as uploader.
+  * Update Vcs-Git and Vcs-Browser URLs.
+  * Improve long description of reclass-doc.
+  * Have python-reclass depend on python-pkg-resources.
+    Closes: bug#757423.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 17 Sep 2014 10:17:04 +0200
+
+reclass (1.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- martin f. krafft <madduck@debian.org>  Sat, 01 Mar 2014 14:48:19 +0100
+
+reclass (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release, fixing recursion of class mappings.
+  * Updated Standards-Version to 3.9.5; no changes required.
+
+ -- martin f. krafft <madduck@debian.org>  Fri, 27 Dec 2013 09:44:42 +1300
+
+reclass (1.2.1-1) unstable; urgency=low
+
+  * New upstream release, fixing the Salt adapter.
+
+ -- martin f. krafft <madduck@debian.org>  Thu, 26 Dec 2013 17:08:15 +1300
+
+reclass (1.2-1) unstable; urgency=low
+
+  * New upstream release, with the following major changes:
+    - class mappings
+    - parameter interpolation across lists
+    - classes caching
+    - yaml_fs: nodes may reside in subdirectories
+  * Remove dangling symlink from /usr/share/doc/reclass/html, add a note about
+    documentation in reclass-doc (and online) to README.Debian instead.
+
+ -- martin f. krafft <madduck@debian.org>  Wed, 28 Aug 2013 13:24:17 +0200
+
+reclass (1.1-1) unstable; urgency=low
+
+  * Add a build-dependency on python-yaml, thanks Jeroen Dekkers.
+  * Fix inter-package dependencies (use binary:Version instead of
+    source:Version), again thanks Jeroen Dekkers.
+  * Move reclass binary package into 'admin' section.
+
+ -- martin f. krafft <madduck@debian.org>  Wed, 28 Aug 2013 09:13:48 +0200
+
+reclass (1.0.2-1) unstable; urgency=low
+
+  * New upstream release (version number fix).
+  * Split Python module into python-reclass.
+
+ -- martin f. krafft <madduck@debian.org>  Tue, 27 Aug 2013 21:43:20 +0200
+
+reclass (1.0.1-1) unstable; urgency=low
+
+  * New upstream release (documentation updates only).
+
+ -- martin f. krafft <madduck@debian.org>  Tue, 27 Aug 2013 18:07:39 +0200
+
+reclass (1.0-1) unstable; urgency=low
+
+  * Initial release (closes: #720922).
+
+ -- martin f. krafft <madduck@debian.org>  Mon, 26 Aug 2013 10:52:31 +0200
